@@ -44,7 +44,8 @@ public class TriangleTypeControllerTest {
 		assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(responseEntity.getBody()).isEqualTo(TriangleType.SCALENE.getValue());
 	}
-
+	
+	@Test
 	public void testFindTriangleType4() throws TriangleTypeException {
 		ResponseEntity<String> responseEntity = triangleTypeController.findTriangleType(-1,2,3);
 		assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
