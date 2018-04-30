@@ -36,7 +36,8 @@ public class TriangleTypeServiceImplsTest {
 	public void testProcess3() throws TriangleTypeException {
 		assertThat(triangleTypeServiceImpls.process(5,10,15)).isEqualTo(TriangleType.SCALENE);
 	}
-
+	
+	@Test
 	public void testProcess4() throws TriangleTypeException {
 		assertThat(triangleTypeServiceImpls.process(1,-10,15)).isEqualTo(TriangleType.INVALID);
 	}
